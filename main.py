@@ -25,7 +25,7 @@ if __name__ == "__main__":
     rand1 = random.randrange(2, 14, 2)
     rand2 = random.randrange(2, 14, 2)
     statements = [
-        "local G, H, G_generators, H_generators, G_group_check, H_group_check, G_orbit, isomorphism;",
+        "local G, H, G_generators, H_generators, isomorphism;",
        f"G := SymmetricGroup({rand1});",
        f"H := DihedralGroup(IsPermGroup, {rand2});",
         """Print("G: ", G, "\\n");""",
@@ -40,7 +40,6 @@ if __name__ == "__main__":
         """H_generators := GeneratorsOfGroup(H);""",
         """Print("G_generators: ", G_generators, "\\n");""",
         """Print("H_generators: ", H_generators, "\\n");""",
-        """H_group_check := Group(H_generators);""",
         """# Check group Isomorphism""",
         """isomorphism := IsomorphismGroups(G, H);;""",
         """if isomorphism <> fail then
