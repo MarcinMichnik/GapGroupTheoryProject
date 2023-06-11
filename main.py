@@ -40,14 +40,10 @@ if __name__ == "__main__":
         """H_generators := GeneratorsOfGroup(H);""",
         """Print("G_generators: ", G_generators, "\\n");""",
         """Print("H_generators: ", H_generators, "\\n");""",
-        """# Define the group orbit to test creating new SymmetricGroup""",
-        """G_orbit := Orbits(G)[1];""",
-        """G_group_check := SymmetricGroup(G_orbit);""",
         """H_group_check := Group(H_generators);""",
         """# Check group Isomorphism""",
         """isomorphism := IsomorphismGroups(G, H);;""",
-        """
-        if isomorphism <> fail then
+        """if isomorphism <> fail then
         Print("G and H are isomorphic.\\n");
         Print("Isomorphism: ", isomorphism, "\\n");
     else
