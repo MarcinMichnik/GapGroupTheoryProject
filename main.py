@@ -35,12 +35,12 @@ if __name__ == "__main__":
     else
         Print("H is not a subgroup of G.\\n");
     fi;""",
-        """# Define the generators for groups and create new groups for check""",
+        # Print the generators for groups
         """G_generators := GeneratorsOfGroup(G);""",
         """H_generators := GeneratorsOfGroup(H);""",
         """Print("G_generators: ", G_generators, "\\n");""",
         """Print("H_generators: ", H_generators, "\\n");""",
-        """# Check group Isomorphism""",
+        # Check group Isomorphism
         """isomorphism := IsomorphismGroups(G, H);;""",
         """if isomorphism <> fail then
         Print("G and H are isomorphic.\\n");
